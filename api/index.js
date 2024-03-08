@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
-const handleCron = require("./cron.js");
 
 require("dotenv").config();
 
-app.get("/", handleCron);
+app.get("/", (req, res) => {
+  console.log("mouahaha");
+  res.status(200).json({ success: true, msg: new Date.now() });
+});
 app.get("/cron", (req, res) => {
   console.log("mouahaha");
   res.status(200).json({ success: true, msg: "MOuahAHahAh" });
