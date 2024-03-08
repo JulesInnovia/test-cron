@@ -1,16 +1,15 @@
 const express = require("express");
 const app = express();
 
+const handleCron = require("./cron");
+
 require("dotenv").config();
 
 app.get("/", (req, res) => {
-  console.log("mouahaha");
+  console.log("accueil");
   res.status(200).json({ success: true, msg: new Date() });
 });
-app.get("/cron", (req, res) => {
-  console.log("mouahaha");
-  res.status(200).json({ success: true, msg: "MOuahAHahAh" });
-});
+app.get("/cron", handleCron);
 
 const port = process.env.PORT || 3100;
 
