@@ -7,6 +7,7 @@ require("dotenv").config();
 app.get("/", handleCron);
 app.get("/cron", (req, res) => {
   console.log("mouahaha");
+  res.status(200).json({ success: true, msg: "MOuahAHahAh" });
 });
 
 const port = process.env.PORT || 3100;
