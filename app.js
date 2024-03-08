@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
+const handleCron = require("./cron.js");
 
-app.get("/", (req, res) => {
-  console.log("test", Date.now());
-});
+require("dotenv").config();
 
-const port = 3100;
+app.get("/", handleCron);
+
+const port = process.env.PORT || 3100;
 
 app.listen(port, () => {
   console.log(`Listening to port ${port}`);
