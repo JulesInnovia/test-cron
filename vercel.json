@@ -14,8 +14,12 @@
   ],
   "crons": [
     {
-      "path": "/cron",
+      "path": "/cron1",
       "schedule": "*/2 * * * *"
+    },
+    {
+      "path": "/cron2",
+      "schedule": "*/5 * * * *"
     }
   ]
 }
