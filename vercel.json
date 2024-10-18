@@ -3,13 +3,13 @@
 
   "crons": [
     {
-      "path": "./api/cron",
+      "path": "/api/cron",
       "schedule": "*/2 * * * *"
     }
   ],
   "builds": [
     {
-      "src": "./api/index.js",
+      "src": "/api/index.js",
       "use": "@vercel/node"
     }
   ]
