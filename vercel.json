@@ -14,7 +14,7 @@
   ],
   "crons": [
     {
-      "path": "/cron.js",
+      "path": "/cron",
       "schedule": "*/2 * * * *"
     }
   ]
