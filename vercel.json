@@ -1,15 +1,21 @@
 {
   "version": 2,
-  "crons": [
-    {
-      "path": "/cron.js",
-      "schedule": "*/2 * * * *"
-    }
-  ],
   "builds": [
     {
       "src": "app.js",
       "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.js"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/cron.js",
+      "schedule": "*/2 * * * *"
     }
   ]
 }
